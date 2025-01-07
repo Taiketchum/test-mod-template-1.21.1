@@ -1,6 +1,20 @@
 {
   "item.testmod.ruby_gem": "Ruby",
   "item.testmod.raw_ruby": "Raw Ruby",
-  "item.testmod.dagger": "Dagger",
-  "block.testmod.ruby_block": "Ruby Block"
+  "item.testmod.truffle": "Truffle",
+
+
+  "item.testmod.iron_chisel": "Iron Chisel",
+  "item.testmod.diamond_chisel": "Diamond Chisel",
+  "item.testmod.netherite_chisel": "Netherite Chisel",
+
+  "block.testmod.ruby_block": "Ruby Block",
+  "block.testmod.raw_ruby_block": "Raw Ruby Block",
+  "block.testmod.ruby_ore": "Ruby Ore",
+  "block.testmod.deepslate_ruby_ore": "Deepslate Ruby Ore",
+
+  "block.testmod.truffle_dirt": "Truffle Dirt",
+
+  "itemgroup.testmod.test_group_items": "Test group items",
+  "itemgroup.testmod.test_group_blocks": "Test group blocks"
 }

@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "testmod:ruby_block",
+    "testmod:raw_ruby_block",
+    "testmod:ruby_ore"
+  ]
+}
