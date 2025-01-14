@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "Palm",
+  "ingredients": [
+    {
+      "item": "testmod:stripped_palm_wood"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "testmod:palm_plank"
+  }
+}

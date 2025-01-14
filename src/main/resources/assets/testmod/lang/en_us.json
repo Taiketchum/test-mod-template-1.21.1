@@ -1,7 +1,17 @@
 {
   "item.testmod.ruby_gem": "Ruby",
   "item.testmod.raw_ruby": "Raw Ruby",
+
+  "item.testmod.smashed_coal": "Smashed Coal",
+
   "item.testmod.truffle": "Truffle",
+  "item.testmod.truffle_stew": "Truffle Stew",
+  "item.testmod.cod_skewer": "Cod Skewer",
+  "item.testmod.salmon_skewer": "Salmon Skewer",
+
+  "item.testmod.baked_apple": "Baked Apple",
+
+  "item.testmod.drink": "Test Drink",
 
 
   "item.testmod.iron_chisel": "Iron Chisel",
@@ -14,6 +24,44 @@
   "block.testmod.deepslate_ruby_ore": "Deepslate Ruby Ore",
 
   "block.testmod.truffle_dirt": "Truffle Dirt",
+
+  "block.testmod.palm_stairs": "Palm Stairs",
+  "block.testmod.palm_slab": "Palm Slab",
+  "block.testmod.palm_button": "Palm Button",
+  "block.testmod.palm_pressure_plate": "Palm Pressure Plate",
+  "block.testmod.palm_fence": "Palm Fence",
+  "block.testmod.palm_fence_gate": "Palm Fence Gate",
+  "block.testmod.palm_wall": "Palm Wall",
+  "block.testmod.palm_door": "Palm Door",
+  "block.testmod.palm_trapdoor": "Palm Trapdoor",
+
+  "block.testmod.palm_log": "Palm Log",
+  "block.testmod.palm_wood": "Palm Wood",
+  "block.testmod.stripped_palm_log": "Stripped Palm Log",
+  "block.testmod.stripped_palm_wood": "Stripped Palm Wood",
+  "block.testmod.palm_plank": "Palm Planks",
+
+  "block.testmod.marble": "Marble",
+  "block.testmod.polished_marble": "Polished Marble",
+
+  "block.testmod.marble_stairs": "Marble Stairs",
+  "block.testmod.marble_slab": "Marble Slab",
+  "block.testmod.marble_wall": "Marble Wall",
+
+  "block.testmod.polished_marble_stairs": "Polished Marble Stairs",
+  "block.testmod.polished_marble_slab": "Polished Marble Slab",
+  "block.testmod.polished_marble_wall": "Polished Marble Wall",
+
+  "block.testmod.polished_andesite_wall": "Polished Andesite Wall",
+  "block.testmod.polished_granite_wall": "Polished Granite Wall",
+  "block.testmod.polished_diorite_wall": "Polished Diorite Wall ",
+
+  "tooltip.testmod.shift_down": "§7Press §eShift§7 for more Information§r",
+
+  "tooltip.testmod.truffle_stew": "§7A stew made from rare truffles, some say it has health boosting proprieties§r",
+
+  "tooltip.testmod.truffle_dirt": "§7When a brown mushroom is thrown on this block it will turn into a truffle§r",
+  "tooltip.testmod.chisel": "§7This Item chisels certain blocks into bricks§r",
 
   "itemgroup.testmod.test_group_items": "Test group items",
   "itemgroup.testmod.test_group_blocks": "Test group blocks"

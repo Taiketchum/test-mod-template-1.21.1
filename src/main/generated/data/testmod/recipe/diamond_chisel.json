@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "$": {
+      "item": "minecraft:diamond"
+    },
+    "D": {
+      "item": "minecraft:polished_deepslate"
+    },
+    "S": {
+      "item": "minecraft:stone"
+    }
+  },
+  "pattern": [
+    "$",
+    "S",
+    "D"
+  ],
+  "result": {
+    "count": 1,
+    "id": "testmod:diamond_chisel"
+  }
+}

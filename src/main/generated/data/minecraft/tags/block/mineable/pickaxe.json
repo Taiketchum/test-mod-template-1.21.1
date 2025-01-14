@@ -1,0 +1,19 @@
+{
+  "values": [
+    "testmod:raw_ruby_block",
+    "testmod:ruby_ore",
+    "testmod:deepslate_ruby_ore",
+    "testmod:ruby_block",
+    "testmod:marble",
+    "testmod:polished_marble",
+    "testmod:marble_stairs",
+    "testmod:marble_slab",
+    "testmod:marble_wall",
+    "testmod:polished_marble_stairs",
+    "testmod:polished_marble_slab",
+    "testmod:polished_marble_wall",
+    "testmod:polished_andesite_wall",
+    "testmod:polished_granite_wall",
+    "testmod:polished_diorite_wall"
+  ]
+}

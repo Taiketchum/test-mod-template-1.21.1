@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_palm_plank": {
+      "conditions": {
+        "items": [
+          {
+            "items": "testmod:palm_plank"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "testmod:palm_fence_gate"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_palm_plank"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "testmod:palm_fence_gate"
+    ]
+  }
+}

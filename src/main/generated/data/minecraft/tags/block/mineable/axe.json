@@ -1,0 +1,17 @@
+{
+  "values": [
+    "testmod:palm_log",
+    "testmod:palm_wood",
+    "testmod:stripped_palm_log",
+    "testmod:stripped_palm_wood",
+    "testmod:palm_plank",
+    "testmod:palm_stairs",
+    "testmod:palm_slab",
+    "testmod:palm_button",
+    "testmod:palm_pressure_plate",
+    "testmod:palm_fence",
+    "testmod:palm_fence_gate",
+    "testmod:palm_door",
+    "testmod:palm_trapdoor"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "testmod:block/polished_marble_slab"
+    },
+    "type=double": {
+      "model": "testmod:block/polished_marble"
+    },
+    "type=top": {
+      "model": "testmod:block/polished_marble_slab_top"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "values": [
+    "testmod:marble_wall",
+    "testmod:polished_marble_wall",
+    "testmod:polished_andesite_wall",
+    "testmod:polished_granite_wall",
+    "testmod:polished_diorite_wall"
+  ]
+}

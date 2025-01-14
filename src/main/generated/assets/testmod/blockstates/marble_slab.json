@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "testmod:block/marble_slab"
+    },
+    "type=double": {
+      "model": "testmod:block/marble"
+    },
+    "type=top": {
+      "model": "testmod:block/marble_slab_top"
+    }
+  }
+}

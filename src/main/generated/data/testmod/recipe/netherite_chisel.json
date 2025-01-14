@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "minecraft:polished_deepslate"
+    },
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "S": {
+      "item": "minecraft:stone"
+    }
+  },
+  "pattern": [
+    "N",
+    "S",
+    "D"
+  ],
+  "result": {
+    "count": 1,
+    "id": "testmod:netherite_chisel"
+  }
+}

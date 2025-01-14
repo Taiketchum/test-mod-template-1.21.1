@@ -1,0 +1,4 @@
+// 1.21.1	2025-01-14T05:52:10.0424955	Test Mod/Tags for minecraft:item
+19e11fe166c340dfa85d5cf6fb216048895a9af1 data\testmod\tags\item\transformable_items.json
+696f170b1d000380f5af001b90f82999f14233c6 data\minecraft\tags\item\planks.json
+d5989c9d10dccfb80d2283fe64e637ff54c82dce data\minecraft\tags\item\logs_that_burn.json
