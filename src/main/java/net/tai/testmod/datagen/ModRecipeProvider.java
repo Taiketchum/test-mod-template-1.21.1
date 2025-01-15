@@ -9,7 +9,6 @@ import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
-import net.minecraft.recipe.ShapedRecipe;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.Identifier;
@@ -20,9 +19,61 @@ import net.tai.testmod.item.ModItems;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
+
 public class ModRecipeProvider extends FabricRecipeProvider {
     public ModRecipeProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
         super(output, registriesFuture);
+
+    }
+    public static void offerPickaxeRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output)
+                .input('#', input)
+                .input('X', Items.STICK)
+                .pattern("###")
+                .pattern(" X ")
+                .pattern(" X ")
+                .criterion(hasItem(input), conditionsFromItem(input))
+                .offerTo(exporter);
+    }
+    public static void offerSwordRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output)
+                .input('#', input)
+                .input('X', Items.STICK)
+                .pattern(" # ")
+                .pattern(" # ")
+                .pattern(" X ")
+                .criterion(hasItem(input), conditionsFromItem(input))
+                .offerTo(exporter);
+    }
+    public static void offerAxeRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output)
+                .input('#', input)
+                .input('X', Items.STICK)
+                .pattern("## ")
+                .pattern("#X ")
+                .pattern(" X ")
+                .criterion(hasItem(input), conditionsFromItem(input))
+                .offerTo(exporter);
+    }
+    public static void offerShovelRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output)
+                .input('#', input)
+                .input('X', Items.STICK)
+                .pattern(" # ")
+                .pattern(" X ")
+                .pattern(" X ")
+                .criterion(hasItem(input), conditionsFromItem(input))
+                .offerTo(exporter);
+    }
+    public static void offerHoeRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output)
+                .input('#', input)
+                .input('X', Items.STICK)
+                .pattern("## ")
+                .pattern(" X ")
+                .pattern(" X ")
+                .criterion(hasItem(input), conditionsFromItem(input))
+                .offerTo(exporter);
     }
 
     @Override
@@ -129,6 +180,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerWallRecipe(recipeExporter,RecipeCategory.BUILDING_BLOCKS,ModBlocks.POLISHED_GRANITE_WALL,Blocks.POLISHED_GRANITE);
         offerWallRecipe(recipeExporter,RecipeCategory.BUILDING_BLOCKS,ModBlocks.POLISHED_DIORITE_WALL,Blocks.POLISHED_DIORITE);
 
+        offerPickaxeRecipe(recipeExporter,ModItems.RUBY_PICKAXE,ModItems.RUBY_GEM);
+        offerSwordRecipe(recipeExporter,ModItems.RUBY_SWORD,ModItems.RUBY_GEM);
+        offerAxeRecipe(recipeExporter,ModItems.RUBY_AXE,ModItems.RUBY_GEM);
+        offerShovelRecipe(recipeExporter,ModItems.RUBY_SHOVEL,ModItems.RUBY_GEM);
+        offerHoeRecipe(recipeExporter,ModItems.RUBY_HOE,ModItems.RUBY_GEM);
 // AHEAD ---------------------------------------------------------------------------------------------------------------
         offerBarkBlockRecipe(recipeExporter,ModBlocks.PALM_WOOD,ModBlocks.PALM_LOG);
         offerBarkBlockRecipe(recipeExporter,ModBlocks.STRIPPED_PALM_WOOD,ModBlocks.STRIPPED_PALM_LOG);
@@ -138,5 +194,26 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerShapelessRecipe(recipeExporter,ModBlocks.PALM_PLANK,ModBlocks.STRIPPED_PALM_LOG,"Palm",4);
         offerShapelessRecipe(recipeExporter,ModBlocks.PALM_PLANK,ModBlocks.STRIPPED_PALM_WOOD,"Palm",4);
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.HEART_OF_THE_STORM)
+                .pattern("EEE")
+                .pattern("EHE")
+                .pattern("EEE")
+                .input('E', ModItems.ELECTRIC_DUST)
+                .input('H', Items.HEART_OF_THE_SEA)
+                .criterion(hasItem(ModItems.ELECTRIC_DUST), conditionsFromItem(ModItems.ELECTRIC_DUST))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.STORM_SCYTHE)
+                .pattern("EES")
+                .pattern("E H")
+                .pattern("  N")
+                .input('E', ModItems.ELECTRIC_DUST)
+                .input('S', Items.NETHER_STAR)
+                .input('H', ModItems.HEART_OF_THE_STORM)
+                .input('N', Items.NETHERITE_INGOT)
+                .criterion(hasItem(ModItems.HEART_OF_THE_STORM), conditionsFromItem(ModItems.HEART_OF_THE_STORM))
+                .offerTo(recipeExporter);
+
+
+        }
     }
-}

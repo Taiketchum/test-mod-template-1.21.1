@@ -75,4 +75,5 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
                 ItemEntry.builder(item).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(minDrops, maxDrop))))
                 .apply(ApplyBonusLootFunction.oreDrops(impl.getOrThrow(Enchantments.FORTUNE)))));
     }
+
 }

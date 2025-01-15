@@ -25,14 +25,14 @@ public class TruffleDirtBlock extends Block {
     public TruffleDirtBlock(Settings settings) {
         super(settings);
     }
-
+//makes sounds????????????
     @Override
     protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player,
                                  BlockHitResult hit) {
         world.playSound(player, pos, SoundEvents.BLOCK_AMETHYST_BLOCK_CHIME, SoundCategory.BLOCKS, 1f, 1f);
         return ActionResult.SUCCESS;
     }
-
+//check if there item on block
     @Override
     public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
         if(entity instanceof ItemEntity itemEntity) {
@@ -43,11 +43,11 @@ public class TruffleDirtBlock extends Block {
 
         super.onSteppedOn(world, pos, state, entity);
     }
-
+//what items to transform
     private boolean isValidItem(ItemStack stack) {
         return stack.isIn(ModTags.Items.TRANSFORMABLE_ITEMS);
     }
-
+//tooltip
     @Override
     public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
         if (Screen.hasShiftDown()) {

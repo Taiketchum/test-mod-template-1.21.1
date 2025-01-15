@@ -15,6 +15,7 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.world.World;
+import net.tai.testmod.componet.ModDataComponentTypes;
 
 import java.util.HashMap;
 import java.util.List;
@@ -44,6 +45,7 @@ public class ChiselItem extends Item {
             );
 
      */
+    //what blocks can be chisel what they turn into
     private static final Map<Block, Block> CHISEL_MAP = new HashMap<>();
 
     static {
@@ -70,7 +72,7 @@ public class ChiselItem extends Item {
     public ChiselItem(Settings settings) {
         super(settings);
     }
-
+//function: changes the block and damages the chisel
     @Override
     public ActionResult useOnBlock(ItemUsageContext context) {
         World world = context.getWorld();
@@ -84,12 +86,14 @@ public class ChiselItem extends Item {
                         item -> context.getPlayer().sendEquipmentBreakStatus(item, EquipmentSlot.MAINHAND));
 
                 world.playSound(null, context.getBlockPos(), SoundEvents.BLOCK_GRINDSTONE_USE, SoundCategory.BLOCKS);
+                //dataComponents
+                context.getStack().set(ModDataComponentTypes.COORDINATES, context.getBlockPos());
             }
         }
 
         return ActionResult.SUCCESS;
     }
-
+//tooltip
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
         if (Screen.hasShiftDown()){
@@ -97,6 +101,10 @@ public class ChiselItem extends Item {
         }
         else {
             tooltip.add(Text.translatable("tooltip.testmod.shift_down"));
+        }
+        //dataComponents
+        if (stack.get(ModDataComponentTypes.COORDINATES) != null){
+            tooltip.add(Text.literal("§7Last block changed at "+stack.get(ModDataComponentTypes.COORDINATES)+"§r"));
         }
         super.appendTooltip(stack, context, tooltip, type);
     }

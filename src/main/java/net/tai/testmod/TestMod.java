@@ -3,13 +3,17 @@ package net.tai.testmod;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
+import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.advancement.AdvancementEntry;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
+import net.tai.testmod.Events.ModEvents;
 import net.tai.testmod.block.ModBlocks;
+import net.tai.testmod.componet.ModDataComponentTypes;
 import net.tai.testmod.item.ModItemGroups;
 import net.tai.testmod.item.ModItems;
+import net.tai.testmod.util.HammerUsageEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -46,9 +50,13 @@ public class TestMod implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModItemGroups.registerItemGroups();
+		ModDataComponentTypes.registerDataComponentTypes();
+		ModEvents.register();
 //  FUEL----------------------------------------------------------------------------------------------------------------
 		FuelRegistry.INSTANCE.add(ModItems.SMASHED_COAL,2000);
 
+//Hammer breaking blocks
+		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
 //  CUSTOM -------------------------------------------------------------------------------------------------------------
 		System.out.println("Constellation Mod Initialized!");
 		// Check player achievements on server tick

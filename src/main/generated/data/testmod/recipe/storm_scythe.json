@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "E": {
+      "item": "testmod:electric_dust"
+    },
+    "H": {
+      "item": "testmod:heart_of_the_storm"
+    },
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "S": {
+      "item": "minecraft:nether_star"
+    }
+  },
+  "pattern": [
+    "EES",
+    "E H",
+    "  N"
+  ],
+  "result": {
+    "count": 1,
+    "id": "testmod:storm_scythe"
+  }
+}

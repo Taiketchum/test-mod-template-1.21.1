@@ -9,7 +9,8 @@ public class ModFoodComponents {
     public static final FoodComponent TRUFFLE_STEW = new FoodComponent.Builder().nutrition(6).saturationModifier(0.6f).usingConvertsTo(Items.BOWL)
             .statusEffect(new StatusEffectInstance(StatusEffects.HEALTH_BOOST,200), 0.40f).build();
     public static final FoodComponent TRUFFLE = new FoodComponent.Builder().nutrition(1).saturationModifier(0.3f)
-            .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION,100), 0.05f).build();
+            .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION,100), 0.05f)
+            .alwaysEdible().build();
 
     public static final FoodComponent COD_SKEWER = new FoodComponent.Builder().nutrition(6).saturationModifier(0.6f).usingConvertsTo(Items.STICK)
             .build();

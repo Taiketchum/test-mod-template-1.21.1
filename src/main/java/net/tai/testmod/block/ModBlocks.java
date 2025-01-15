@@ -1,15 +1,22 @@
 package net.tai.testmod.block;
 
 import net.minecraft.block.*;
+import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.tai.testmod.TestMod;
+import net.tai.testmod.block.custom.LampBlock;
 import net.tai.testmod.block.custom.TruffleDirtBlock;
+
+import java.util.List;
 
 public class ModBlocks {
 
@@ -88,6 +95,22 @@ public class ModBlocks {
             new WallBlock(AbstractBlock.Settings.copy(Blocks.POLISHED_GRANITE)));
     public static final Block POLISHED_DIORITE_WALL =registerBlock("polished_diorite_wall",
             new WallBlock(AbstractBlock.Settings.copy(Blocks.POLISHED_DIORITE)));
+
+    public static final Block LANTERN_PULSE = registerBlock("lantern_pulse",
+            new Block(AbstractBlock.Settings.copy(Blocks.SEA_LANTERN)){
+                @Override
+                public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
+                    if (Screen.hasShiftDown()) {
+                        tooltip.add(Text.translatable("tooltip.testmod.lantern_pulse"));
+                    }
+                    else {
+                        tooltip.add(Text.translatable("tooltip.testmod.shift_down"));
+                    }
+                    super.appendTooltip(stack, context, tooltip, options);
+                }});
+
+    public static final Block LAMP = registerBlock("lamp",
+            new LampBlock(AbstractBlock.Settings.create().strength(1f).requiresTool().luminance(state -> state.get(LampBlock.CLICKED)?15:0)));
 
 
 

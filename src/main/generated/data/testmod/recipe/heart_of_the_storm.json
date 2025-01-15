@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "testmod:electric_dust"
+    },
+    "H": {
+      "item": "minecraft:heart_of_the_sea"
+    }
+  },
+  "pattern": [
+    "EEE",
+    "EHE",
+    "EEE"
+  ],
+  "result": {
+    "count": 1,
+    "id": "testmod:heart_of_the_storm"
+  }
+}

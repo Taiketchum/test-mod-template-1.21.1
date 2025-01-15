@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "clicked=false": {
+      "model": "testmod:block/lamp"
+    },
+    "clicked=true": {
+      "model": "testmod:block/lamp_on"
+    }
+  }
+}

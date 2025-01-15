@@ -32,6 +32,24 @@ public class ModItemGroups {
                       entries.add(ModItems.COD_SKEWER);
                       entries.add(ModItems.BAKED_APPLE);
 
+                      entries.add(ModItems.ELECTRIC_DUST);
+                      entries.add(ModItems.HEART_OF_THE_STORM);
+
+                      entries.add(ModItems.STORM_SCYTHE);
+
+                      entries.add(ModItems.SILVER_AXE);
+                      entries.add(ModItems.GOLD_AXE);
+
+                      entries.add(ModItems.RUBY_SWORD);
+                      entries.add(ModItems.RUBY_AXE);
+                      entries.add(ModItems.RUBY_PICKAXE);
+                      entries.add(ModItems.RUBY_SHOVEL);
+                      entries.add(ModItems.RUBY_HOE);
+
+                      entries.add(ModItems.IRON_HAMMER);
+                      entries.add(ModItems.DIAMOND_HAMMER);
+                      entries.add(ModItems.NETHERITE_HAMMER);
+
                       entries.add(ModItems.DRINK);
                     }).build());
     public static final ItemGroup TEST_BLOCK_GROUP = Registry.register(Registries.ITEM_GROUP,
@@ -74,6 +92,9 @@ public class ModItemGroups {
                         entries.add(ModBlocks.POLISHED_GRANITE_WALL);
                         entries.add(ModBlocks.POLISHED_DIORITE_WALL);
 
+                        entries.add(ModBlocks.LANTERN_PULSE);
+                        entries.add(ModBlocks.LAMP);
+
 // AHEAD ---------------------------------------------------------------------------------------------------------------
 
                         entries.add(ModBlocks.PALM_LOG);
@@ -81,6 +102,18 @@ public class ModItemGroups {
                         entries.add(ModBlocks.STRIPPED_PALM_LOG);
                         entries.add(ModBlocks.STRIPPED_PALM_WOOD);
                         entries.add(ModBlocks.PALM_PLANK);
+                    }).build());
+    public static final ItemGroup TEST_FOOD_ITEMS = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(TestMod.MOD_ID, "test_food"),
+            FabricItemGroup.builder().icon(()-> new ItemStack(ModItems.BAKED_APPLE))
+                    .displayName(Text.translatable("itemgroup.testmod.test_group_foods"))
+                    .entries((displayContext, entries) -> {
+                        entries.add(ModItems.TRUFFLE);
+                        entries.add(ModItems.TRUFFLE_STEW);
+
+                        entries.add(ModItems.SALMON_SKEWER);
+                        entries.add(ModItems.COD_SKEWER);
+                        entries.add(ModItems.BAKED_APPLE);
                     }).build());
 
 

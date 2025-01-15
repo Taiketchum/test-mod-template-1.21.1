@@ -3,10 +3,10 @@ package net.tai.testmod.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.block.Blocks;
-import net.minecraft.data.client.BlockStateModelGenerator;
-import net.minecraft.data.client.ItemModelGenerator;
-import net.minecraft.data.client.Models;
+import net.minecraft.data.client.*;
+import net.minecraft.util.Identifier;
 import net.tai.testmod.block.ModBlocks;
+import net.tai.testmod.block.custom.LampBlock;
 import net.tai.testmod.item.ModItems;
 
 public class ModModelProvider extends FabricModelProvider {
@@ -57,6 +57,13 @@ public class ModModelProvider extends FabricModelProvider {
         polishedGranitePool.wall(ModBlocks.POLISHED_GRANITE_WALL);
         polishedDioritePool.wall(ModBlocks.POLISHED_DIORITE_WALL);
 
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LANTERN_PULSE);
+
+        Identifier lampOffIdentifier = TexturedModel.CUBE_ALL.upload(ModBlocks.LAMP, blockStateModelGenerator.modelCollector);
+        Identifier lampOnIdentifier = blockStateModelGenerator.createSubModel(ModBlocks.LAMP, "_on", Models.CUBE_ALL, TextureMap::all);
+        blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(ModBlocks.LAMP)
+                .coordinate(BlockStateModelGenerator.createBooleanModelMap(LampBlock.CLICKED, lampOnIdentifier, lampOffIdentifier)));
+
 // AHEAD ---------------------------------------------------------------------------------------------------------------
 
         blockStateModelGenerator.registerLog(ModBlocks.PALM_LOG).log(ModBlocks.PALM_LOG).wood(ModBlocks.PALM_WOOD);
@@ -79,10 +86,22 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.SALMON_SKEWER, Models.GENERATED);
         itemModelGenerator.register(ModItems.BAKED_APPLE, Models.GENERATED);
 
+        itemModelGenerator.register(ModItems.ELECTRIC_DUST, Models.GENERATED);
+        itemModelGenerator.register(ModItems.HEART_OF_THE_STORM, Models.GENERATED);
+
         itemModelGenerator.register(ModItems.DRINK, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.IRON_CHISEL, Models.GENERATED);
         itemModelGenerator.register(ModItems.DIAMOND_CHISEL, Models.GENERATED);
         itemModelGenerator.register(ModItems.NETHERITE_CHISEL, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.RUBY_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.RUBY_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.RUBY_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.RUBY_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.RUBY_HOE, Models.HANDHELD);
+
+        itemModelGenerator.register(ModItems.GOLD_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.SILVER_AXE, Models.HANDHELD);
     }
 }

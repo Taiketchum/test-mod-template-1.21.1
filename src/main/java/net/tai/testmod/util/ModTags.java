@@ -11,6 +11,12 @@ import net.minecraft.util.Identifier;
 public class ModTags {
     public static class Blocks {
 
+        public static final TagKey<Block> NEEDS_RUBY_TOOL = createTag("needs_ruby_tool");
+        public static final TagKey<Block> INCORRECT_FOR_RUBY_TOOL = createTag("incorrect_for_ruby_tool");
+
+        public static final TagKey<Block> NEEDS_STORM_TOOL = createTag("needs_storm_tool");
+        public static final TagKey<Block> INCORRECT_FOR_STORM_TOOL = createTag("incorrect_for_storm_tool");
+
         private static TagKey<Block> createTag(String name){
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(TestMod.MOD_ID, name));
         }

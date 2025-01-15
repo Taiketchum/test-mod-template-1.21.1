@@ -2,10 +2,10 @@ package net.tai.testmod.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
-import net.minecraft.block.Block;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
 import net.tai.testmod.block.ModBlocks;
+import net.tai.testmod.util.ModTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -40,8 +40,6 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE)
                 .add(ModBlocks.TRUFFLE_DIRT);
 
-
-
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.RAW_RUBY_BLOCK)
                 .add(ModBlocks.RUBY_ORE)
@@ -62,6 +60,12 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.POLISHED_ANDESITE_WALL)
                 .add(ModBlocks.POLISHED_GRANITE_WALL)
                 .add(ModBlocks.POLISHED_DIORITE_WALL);
+
+        getOrCreateTagBuilder(ModTags.Blocks.NEEDS_RUBY_TOOL)
+                .addTag(BlockTags.NEEDS_IRON_TOOL);
+
+        getOrCreateTagBuilder(ModTags.Blocks.NEEDS_STORM_TOOL)
+                .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
 
 // AHEAD ---------------------------------------------------------------------------------------------------------------
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)

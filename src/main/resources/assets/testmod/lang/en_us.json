@@ -11,12 +11,27 @@
 
   "item.testmod.baked_apple": "Baked Apple",
 
-  "item.testmod.drink": "Test Drink",
+  "item.testmod.electric_dust": "§bElectric dust§r",
+  "item.testmod.heart_of_the_storm": "§dHeart of the storm§r",
 
+  "item.testmod.storm_scythe": "§dStorm Scythe§r",
+
+  "item.testmod.silver_axe": "§fSilver Axe§r",
+  "item.testmod.gold_axe": "§6Gold Axe§r",
 
   "item.testmod.iron_chisel": "Iron Chisel",
   "item.testmod.diamond_chisel": "Diamond Chisel",
   "item.testmod.netherite_chisel": "Netherite Chisel",
+
+  "item.testmod.iron_hammer": "Iron Hammer",
+  "item.testmod.diamond_hammer": "Diamond Hammer",
+  "item.testmod.netherite_hammer": "Netherite Hammer",
+
+  "item.testmod.ruby_sword": "Ruby Sword",
+  "item.testmod.ruby_pickaxe": "Ruby Pickaxe",
+  "item.testmod.ruby_shovel": "Ruby Shovel",
+  "item.testmod.ruby_axe": "Ruby Axe",
+  "item.testmod.ruby_hoe": "Ruby Hoe",
 
   "block.testmod.ruby_block": "Ruby Block",
   "block.testmod.raw_ruby_block": "Raw Ruby Block",
@@ -59,10 +74,19 @@
   "tooltip.testmod.shift_down": "§7Press §eShift§7 for more Information§r",
 
   "tooltip.testmod.truffle_stew": "§7A stew made from rare truffles, some say it has health boosting proprieties§r",
-
-  "tooltip.testmod.truffle_dirt": "§7When a brown mushroom is thrown on this block it will turn into a truffle§r",
   "tooltip.testmod.chisel": "§7This Item chisels certain blocks into bricks§r",
 
-  "itemgroup.testmod.test_group_items": "Test group items",
-  "itemgroup.testmod.test_group_blocks": "Test group blocks"
+  "tooltip.testmod.truffle_dirt": "§7When a brown mushroom is thrown on this block it will turn into a truffle§r",
+
+  "tooltip.testmod.drink": "§7proof of concept of a drinking item§r",
+  "tooltip.testmod.lantern_pulse": "§7proof of concept of a moving texture block§r",
+  "tooltip.testmod.lamp": "§7proof of concept of a instanced blockstate block§r",
+
+  "item.testmod.drink": "§4Drink[TEST ITEM]§r",
+  "block.testmod.lantern_pulse": "§4Lantern Pulse[TEST BLOCK]§r",
+  "block.testmod.lamp": "§4lamp[TEST BLOCK]§r",
+
+  "itemgroup.testmod.test_group_items": "Test items",
+  "itemgroup.testmod.test_group_foods": "Test foods",
+  "itemgroup.testmod.test_group_blocks": "Test blocks"
 }
