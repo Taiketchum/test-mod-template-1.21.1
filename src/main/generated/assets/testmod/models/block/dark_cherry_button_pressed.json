@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_pressed",
+  "textures": {
+    "texture": "testmod:block/dark_cherry_plank"
+  }
+}

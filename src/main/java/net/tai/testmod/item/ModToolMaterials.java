@@ -13,7 +13,9 @@ public enum ModToolMaterials implements ToolMaterial {
     RUBY_GEM(ModTags.Blocks.INCORRECT_FOR_RUBY_TOOL,
             1200, 5.0F, 4.0F, 22, () -> Ingredient.ofItems(ModItems.RUBY_GEM)),
     STORM(ModTags.Blocks.INCORRECT_FOR_STORM_TOOL,
-            1200, 5.0F, 4.0F, 22, () -> Ingredient.ofItems(ModItems.HEART_OF_THE_STORM));
+            2100, 5.0F, 4.0F, 22, () -> Ingredient.ofItems(ModItems.ELECTRIC_INGOT)),
+    KAIJU(ModTags.Blocks.INCORRECT_FOR_KAIJU_TOOL,
+            2100, 5.0F, 4.0F, 22, () -> Ingredient.ofItems(ModItems.ELECTRIC_INGOT));
 
 
     private final TagKey<Block> inverseTag;

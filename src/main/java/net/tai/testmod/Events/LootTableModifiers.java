@@ -6,17 +6,16 @@ import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.condition.EntityPropertiesLootCondition;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
+import net.minecraft.loot.context.LootContext;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.predicate.entity.EntityPredicate;
 import net.minecraft.registry.RegistryKey;
 import net.tai.testmod.item.ModItems;
-import org.apache.commons.compress.archivers.Lister;
-
-import java.net.http.WebSocket;
-import java.util.List;
+import net.minecraft.predicate.NbtPredicate;
 
 public class LootTableModifiers {
 
@@ -27,26 +26,32 @@ public class LootTableModifiers {
     }
 
     public static void register() {
+        NbtCompound nbtCompound = new NbtCompound();
+        nbtCompound.putBoolean("powered", true);
         LootTableEvents.MODIFY.register((key, tableBuilder, source, registries)->{
             if (key.equals(CREEPER_KEY)){
                 LootPool electric_dust = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(1.0f))//100%
+                        .conditionally(RandomChanceLootCondition.builder(1.0f)) // 100%
+                        .conditionally(EntityPropertiesLootCondition.builder(LootContext.EntityTarget.THIS,
+                                EntityPredicate.Builder.create()
+                                        .type(EntityType.CREEPER)
+                                        .nbt(new NbtPredicate(nbtCompound)) // Create NbtPredicate directly here
+                                        .build()))
                         .with(ItemEntry.builder(ModItems.ELECTRIC_DUST))
-                        .apply(SetCountLootFunction
-                                .builder(UniformLootNumberProvider.create(1,2))
-                                .build())
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1, 4)).build())
                         .build();
-                LootPool storm_heart = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(.01f))//1%
-                        .with(ItemEntry.builder(ModItems.HEART_OF_THE_STORM))
-                        .apply(SetCountLootFunction
-                                .builder(UniformLootNumberProvider.create(1,1))
-                                .build())
-                        .build();
-                tableBuilder.pools(List.of(electric_dust,storm_heart));
-            }
+                tableBuilder.pool(electric_dust);
+                }
         });
     }
 }
+/*LootPool electric_dust = LootPool.builder()
+        .rolls(ConstantLootNumberProvider.create(1))
+        .conditionally(RandomChanceLootCondition.builder(1.0f))//100%
+        .with(ItemEntry.builder(ModItems.ELECTRIC_DUST))
+        .apply(SetCountLootFunction
+                .builder(UniformLootNumberProvider.create(1,2))
+                .build())
+        .build();
+                tableBuilder.pool(electric_dust);*/

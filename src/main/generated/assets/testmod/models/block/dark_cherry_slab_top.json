@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "testmod:block/dark_cherry_plank",
+    "side": "testmod:block/dark_cherry_plank",
+    "top": "testmod:block/dark_cherry_plank"
+  }
+}

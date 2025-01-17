@@ -3,6 +3,10 @@
     "testmod:palm_log",
     "testmod:palm_wood",
     "testmod:stripped_palm_log",
-    "testmod:stripped_palm_wood"
+    "testmod:stripped_palm_wood",
+    "testmod:dark_cherry_log",
+    "testmod:dark_cherry_wood",
+    "testmod:stripped_dark_cherry_log",
+    "testmod:stripped_dark_cherry_wood"
   ]
 }

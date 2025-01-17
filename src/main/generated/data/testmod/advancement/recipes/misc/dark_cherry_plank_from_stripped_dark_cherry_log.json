@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_stripped_dark_cherry_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "testmod:stripped_dark_cherry_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:dark_cherry_plank_from_stripped_dark_cherry_log"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_stripped_dark_cherry_log"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:dark_cherry_plank_from_stripped_dark_cherry_log"
+    ]
+  }
+}

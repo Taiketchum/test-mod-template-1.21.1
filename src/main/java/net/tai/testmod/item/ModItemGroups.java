@@ -34,6 +34,7 @@ public class ModItemGroups {
 
                       entries.add(ModItems.ELECTRIC_DUST);
                       entries.add(ModItems.HEART_OF_THE_STORM);
+                      entries.add(ModItems.ELECTRIC_INGOT);
 
                       entries.add(ModItems.STORM_SCYTHE);
 
@@ -49,6 +50,16 @@ public class ModItemGroups {
                       entries.add(ModItems.IRON_HAMMER);
                       entries.add(ModItems.DIAMOND_HAMMER);
                       entries.add(ModItems.NETHERITE_HAMMER);
+
+                      entries.add(ModItems.KAIJU_HELMET);
+                      entries.add(ModItems.KAIJU_CHESTPLATE);
+                      entries.add(ModItems.KAIJU_LEGGINGS);
+                      entries.add(ModItems.KAIJU_BOOTS);
+
+                      entries.add(ModItems.RUBY_HELMET);
+                      entries.add(ModItems.RUBY_CHESTPLATE);
+                      entries.add(ModItems.RUBY_LEGGINGS);
+                      entries.add(ModItems.RUBY_BOOTS);
 
                       entries.add(ModItems.DRINK);
                     }).build());
@@ -102,9 +113,27 @@ public class ModItemGroups {
                         entries.add(ModBlocks.STRIPPED_PALM_LOG);
                         entries.add(ModBlocks.STRIPPED_PALM_WOOD);
                         entries.add(ModBlocks.PALM_PLANK);
+
+                        entries.add(ModBlocks.DARK_CHERRY_LOG);
+                        entries.add(ModBlocks.DARK_CHERRY_WOOD);
+                        entries.add(ModBlocks.STRIPPED_DARK_CHERRY_LOG);
+                        entries.add(ModBlocks.STRIPPED_DARK_CHERRY_WOOD);
+                        entries.add(ModBlocks.DARK_CHERRY_PLANK);
+
+                        entries.add(ModBlocks.DARK_CHERRY_STAIRS);
+                        entries.add(ModBlocks.DARK_CHERRY_SLAB);
+
+                        entries.add(ModBlocks.DARK_CHERRY_BUTTON);
+                        entries.add(ModBlocks.DARK_CHERRY_PRESSURE_PLATE);
+
+                        entries.add(ModBlocks.DARK_CHERRY_FENCE);
+                        entries.add(ModBlocks.DARK_CHERRY_FENCE_GATE);
+
+                        entries.add(ModBlocks.DARK_CHERRY_DOOR);
+                        entries.add(ModBlocks.DARK_CHERRY_TRAPDOOR);
                     }).build());
     public static final ItemGroup TEST_FOOD_ITEMS = Registry.register(Registries.ITEM_GROUP,
-            Identifier.of(TestMod.MOD_ID, "test_food"),
+            Identifier.of(TestMod.MOD_ID, "test_foods"),
             FabricItemGroup.builder().icon(()-> new ItemStack(ModItems.BAKED_APPLE))
                     .displayName(Text.translatable("itemgroup.testmod.test_group_foods"))
                     .entries((displayContext, entries) -> {
@@ -114,6 +143,30 @@ public class ModItemGroups {
                         entries.add(ModItems.SALMON_SKEWER);
                         entries.add(ModItems.COD_SKEWER);
                         entries.add(ModItems.BAKED_APPLE);
+                    }).build());
+
+    public static final ItemGroup TEST_COMBAT_ITEMS = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(TestMod.MOD_ID, "test_combat"),
+            FabricItemGroup.builder().icon(()-> new ItemStack(ModItems.STORM_SCYTHE))
+                    .displayName(Text.translatable("itemgroup.testmod.test_group_combat"))
+                    .entries((displayContext, entries) -> {
+                        entries.add(ModItems.RUBY_SWORD);
+                        entries.add(ModItems.RUBY_AXE);
+
+                        entries.add(ModItems.STORM_SCYTHE);
+
+                        entries.add(ModItems.SW_2023);
+                        entries.add(ModItems.SW_2024);
+
+                        entries.add(ModItems.KAIJU_HELMET);
+                        entries.add(ModItems.KAIJU_CHESTPLATE);
+                        entries.add(ModItems.KAIJU_LEGGINGS);
+                        entries.add(ModItems.KAIJU_BOOTS);
+
+                        entries.add(ModItems.RUBY_HELMET);
+                        entries.add(ModItems.RUBY_CHESTPLATE);
+                        entries.add(ModItems.RUBY_LEGGINGS);
+                        entries.add(ModItems.RUBY_BOOTS);
                     }).build());
 
 

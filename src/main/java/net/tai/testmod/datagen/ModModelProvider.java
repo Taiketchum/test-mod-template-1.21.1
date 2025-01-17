@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.client.*;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.util.Identifier;
 import net.tai.testmod.block.ModBlocks;
 import net.tai.testmod.block.custom.LampBlock;
@@ -69,6 +70,22 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerLog(ModBlocks.PALM_LOG).log(ModBlocks.PALM_LOG).wood(ModBlocks.PALM_WOOD);
         blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_PALM_LOG).log(ModBlocks.STRIPPED_PALM_LOG).wood(ModBlocks.STRIPPED_PALM_WOOD);
 
+        blockStateModelGenerator.registerLog(ModBlocks.DARK_CHERRY_LOG).log(ModBlocks.DARK_CHERRY_LOG).wood(ModBlocks.DARK_CHERRY_WOOD);
+        blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_DARK_CHERRY_LOG).log(ModBlocks.STRIPPED_DARK_CHERRY_LOG).wood(ModBlocks.STRIPPED_DARK_CHERRY_WOOD);
+        BlockStateModelGenerator.BlockTexturePool darkCherryWoodPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.DARK_CHERRY_PLANK);
+        darkCherryWoodPool.stairs(ModBlocks.DARK_CHERRY_STAIRS);
+        darkCherryWoodPool.slab(ModBlocks.DARK_CHERRY_SLAB);
+
+        darkCherryWoodPool.button(ModBlocks.DARK_CHERRY_BUTTON);
+        darkCherryWoodPool.pressurePlate(ModBlocks.DARK_CHERRY_PRESSURE_PLATE);
+
+        darkCherryWoodPool.fence(ModBlocks.DARK_CHERRY_FENCE);
+        darkCherryWoodPool.fenceGate(ModBlocks.DARK_CHERRY_FENCE_GATE);
+
+        blockStateModelGenerator.registerDoor(ModBlocks.DARK_CHERRY_DOOR);
+        blockStateModelGenerator.registerTrapdoor(ModBlocks.DARK_CHERRY_TRAPDOOR);
+
+
 
     }
 
@@ -88,6 +105,7 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.ELECTRIC_DUST, Models.GENERATED);
         itemModelGenerator.register(ModItems.HEART_OF_THE_STORM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ELECTRIC_INGOT, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.DRINK, Models.GENERATED);
 
@@ -103,5 +121,16 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.GOLD_AXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.SILVER_AXE, Models.HANDHELD);
+
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.KAIJU_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.KAIJU_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.KAIJU_LEGGINGS);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.KAIJU_BOOTS);
+
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.RUBY_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.RUBY_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.RUBY_LEGGINGS);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.RUBY_BOOTS);
+
     }
 }

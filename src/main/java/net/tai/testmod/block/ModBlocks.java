@@ -68,6 +68,38 @@ public class ModBlocks {
     public static final Block STRIPPED_PALM_WOOD = registerBlock("stripped_palm_wood",
             new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG)));
 
+    public static final Block DARK_CHERRY_PLANK = registerBlock("dark_cherry_plank",
+            new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
+    public static final Block DARK_CHERRY_LOG = registerBlock("dark_cherry_log",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG)));
+    public static final Block DARK_CHERRY_WOOD = registerBlock("dark_cherry_wood",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG)));
+    public static final Block STRIPPED_DARK_CHERRY_LOG = registerBlock("stripped_dark_cherry_log",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG)));
+    public static final Block STRIPPED_DARK_CHERRY_WOOD = registerBlock("stripped_dark_cherry_wood",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG)));
+
+    public static final Block DARK_CHERRY_STAIRS =registerBlock("dark_cherry_stairs",
+            new StairsBlock(ModBlocks.DARK_CHERRY_PLANK.getDefaultState(),
+                    AbstractBlock.Settings.create().strength(2f).requiresTool()));
+    public static final Block DARK_CHERRY_SLAB =registerBlock("dark_cherry_slab",
+            new SlabBlock(AbstractBlock.Settings.create().strength(2f).requiresTool()));
+
+    public static final Block DARK_CHERRY_BUTTON =registerBlock("dark_cherry_button",
+            new ButtonBlock(BlockSetType.OAK, 10, AbstractBlock.Settings.create().strength(2f).requiresTool().noCollision()));
+    public static final Block DARK_CHERRY_PRESSURE_PLATE =registerBlock("dark_cherry_pressure_plate",
+            new PressurePlateBlock(BlockSetType.OAK, AbstractBlock.Settings.create().strength(2f).requiresTool().noCollision()));
+
+    public static final Block DARK_CHERRY_FENCE =registerBlock("dark_cherry_fence",
+            new FenceBlock(AbstractBlock.Settings.create().strength(2f).requiresTool()));
+    public static final Block DARK_CHERRY_FENCE_GATE =registerBlock("dark_cherry_fence_gate",
+            new FenceGateBlock(WoodType.OAK, AbstractBlock.Settings.create().strength(2f).requiresTool()));
+
+    public static final Block DARK_CHERRY_DOOR =registerBlock("dark_cherry_door",
+            new DoorBlock(BlockSetType.OAK, AbstractBlock.Settings.create().strength(2f).requiresTool().nonOpaque()));
+    public static final Block DARK_CHERRY_TRAPDOOR =registerBlock("dark_cherry_trapdoor",
+            new TrapdoorBlock(BlockSetType.OAK, AbstractBlock.Settings.create().strength(2f).requiresTool().nonOpaque()));
+
     public static final Block MARBLE = registerBlock("marble",
             new Block(AbstractBlock.Settings.copy(Blocks.ANDESITE)));
     public static final Block POLISHED_MARBLE = registerBlock("polished_marble",

@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "group": "Palm",
+  "group": "Dark_cherry",
   "ingredients": [
     {
       "item": "testmod:palm_log"

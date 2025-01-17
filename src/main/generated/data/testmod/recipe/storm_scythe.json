@@ -3,20 +3,17 @@
   "category": "equipment",
   "key": {
     "E": {
-      "item": "testmod:electric_dust"
+      "item": "testmod:electric_ingot"
     },
     "H": {
       "item": "testmod:heart_of_the_storm"
     },
     "N": {
       "item": "minecraft:netherite_ingot"
-    },
-    "S": {
-      "item": "minecraft:nether_star"
     }
   },
   "pattern": [
-    "EES",
+    "EEE",
     "E H",
     "  N"
   ],

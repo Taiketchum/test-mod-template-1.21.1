@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "testmod:electric_dust"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "EEE",
+    "EIE",
+    "EEE"
+  ],
+  "result": {
+    "count": 1,
+    "id": "testmod:electric_ingot"
+  }
+}

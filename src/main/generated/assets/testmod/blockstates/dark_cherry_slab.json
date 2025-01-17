@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "testmod:block/dark_cherry_slab"
+    },
+    "type=double": {
+      "model": "testmod:block/dark_cherry_plank"
+    },
+    "type=top": {
+      "model": "testmod:block/dark_cherry_slab_top"
+    }
+  }
+}

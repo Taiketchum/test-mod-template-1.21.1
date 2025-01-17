@@ -17,6 +17,9 @@ public class ModTags {
         public static final TagKey<Block> NEEDS_STORM_TOOL = createTag("needs_storm_tool");
         public static final TagKey<Block> INCORRECT_FOR_STORM_TOOL = createTag("incorrect_for_storm_tool");
 
+        public static final TagKey<Block> NEEDS_KAIJU_TOOL = createTag("needs_kaiju_tool");
+        public static final TagKey<Block> INCORRECT_FOR_KAIJU_TOOL = createTag("incorrect_for_kaiju_tool");
+
         private static TagKey<Block> createTag(String name){
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(TestMod.MOD_ID, name));
         }

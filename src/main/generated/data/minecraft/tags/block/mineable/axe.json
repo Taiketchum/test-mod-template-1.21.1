@@ -12,6 +12,19 @@
     "testmod:palm_fence",
     "testmod:palm_fence_gate",
     "testmod:palm_door",
-    "testmod:palm_trapdoor"
+    "testmod:palm_trapdoor",
+    "testmod:dark_cherry_log",
+    "testmod:dark_cherry_wood",
+    "testmod:stripped_dark_cherry_log",
+    "testmod:stripped_dark_cherry_wood",
+    "testmod:dark_cherry_plank",
+    "testmod:dark_cherry_stairs",
+    "testmod:dark_cherry_slab",
+    "testmod:dark_cherry_button",
+    "testmod:dark_cherry_pressure_plate",
+    "testmod:dark_cherry_fence",
+    "testmod:dark_cherry_fence_gate",
+    "testmod:dark_cherry_door",
+    "testmod:dark_cherry_trapdoor"
   ]
 }

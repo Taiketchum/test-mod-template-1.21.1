@@ -13,11 +13,15 @@
 
   "item.testmod.electric_dust": "§bElectric dust§r",
   "item.testmod.heart_of_the_storm": "§dHeart of the storm§r",
+  "item.testmod.electric_ingot": "§bElectric Ingot§r",
 
   "item.testmod.storm_scythe": "§dStorm Scythe§r",
 
   "item.testmod.silver_axe": "§fSilver Axe§r",
   "item.testmod.gold_axe": "§6Gold Axe§r",
+
+  "item.testmod.sw_2023": "§dSW-2023§r",
+  "item.testmod.sw_2024": "§dSW-2024§r",
 
   "item.testmod.iron_chisel": "Iron Chisel",
   "item.testmod.diamond_chisel": "Diamond Chisel",
@@ -33,6 +37,16 @@
   "item.testmod.ruby_axe": "Ruby Axe",
   "item.testmod.ruby_hoe": "Ruby Hoe",
 
+  "item.testmod.ruby_helmet": "Ruby Helment",
+  "item.testmod.ruby_chestplate": "Ruby Chestplate",
+  "item.testmod.ruby_leggings": "Ruby Leggings",
+  "item.testmod.ruby_boots": "Ruby Boots",
+
+  "item.testmod.kaiju_helmet": "Kaiju Helment",
+  "item.testmod.kaiju_chestplate": "Kaiju Chestplate",
+  "item.testmod.kaiju_leggings": "Kaiju Leggings",
+  "item.testmod.kaiju_boots": "Kaiju Boots",
+
   "block.testmod.ruby_block": "Ruby Block",
   "block.testmod.raw_ruby_block": "Raw Ruby Block",
   "block.testmod.ruby_ore": "Ruby Ore",
@@ -46,7 +60,6 @@
   "block.testmod.palm_pressure_plate": "Palm Pressure Plate",
   "block.testmod.palm_fence": "Palm Fence",
   "block.testmod.palm_fence_gate": "Palm Fence Gate",
-  "block.testmod.palm_wall": "Palm Wall",
   "block.testmod.palm_door": "Palm Door",
   "block.testmod.palm_trapdoor": "Palm Trapdoor",
 
@@ -55,6 +68,21 @@
   "block.testmod.stripped_palm_log": "Stripped Palm Log",
   "block.testmod.stripped_palm_wood": "Stripped Palm Wood",
   "block.testmod.palm_plank": "Palm Planks",
+
+  "block.testmod.dark_cherry_log": "Dark Cherry Log",
+  "block.testmod.dark_cherry_wood": "Dark Cherry Wood",
+  "block.testmod.stripped_dark_cherry_log": "Stripped Dark Cherry Log",
+  "block.testmod.stripped_dark_cherry_wood": "Stripped Dark Cherry Wood",
+  "block.testmod.dark_cherry_plank": "Dark Cherry Planks",
+
+  "block.testmod.dark_cherry_stairs": "Dark Cherry Stairs",
+  "block.testmod.dark_cherry_slab": "Dark Cherry Slab",
+  "block.testmod.dark_cherry_button": "Dark Cherry Button",
+  "block.testmod.dark_cherry_pressure_plate": "Dark Cherry Pressure Plate",
+  "block.testmod.dark_cherry_fence": "Dark Cherry Fence",
+  "block.testmod.dark_cherry_fence_gate": "Dark Cherry Fence Gate",
+  "block.testmod.dark_cherry_door": "Dark Cherry Door",
+  "block.testmod.dark_cherry_trapdoor": "Dark Cherry Trapdoor",
 
   "block.testmod.marble": "Marble",
   "block.testmod.polished_marble": "Polished Marble",
@@ -88,5 +116,6 @@
 
   "itemgroup.testmod.test_group_items": "Test items",
   "itemgroup.testmod.test_group_foods": "Test foods",
+  "itemgroup.testmod.test_group_combat": "Test combat",
   "itemgroup.testmod.test_group_blocks": "Test blocks"
 }

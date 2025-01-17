@@ -189,10 +189,43 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerBarkBlockRecipe(recipeExporter,ModBlocks.PALM_WOOD,ModBlocks.PALM_LOG);
         offerBarkBlockRecipe(recipeExporter,ModBlocks.STRIPPED_PALM_WOOD,ModBlocks.STRIPPED_PALM_LOG);
 
-        offerShapelessRecipe(recipeExporter,ModBlocks.PALM_PLANK,ModBlocks.PALM_LOG,"Palm",4);
-        offerShapelessRecipe(recipeExporter,ModBlocks.PALM_PLANK,ModBlocks.PALM_WOOD,"Palm",4);
-        offerShapelessRecipe(recipeExporter,ModBlocks.PALM_PLANK,ModBlocks.STRIPPED_PALM_LOG,"Palm",4);
-        offerShapelessRecipe(recipeExporter,ModBlocks.PALM_PLANK,ModBlocks.STRIPPED_PALM_WOOD,"Palm",4);
+        offerShapelessRecipe(recipeExporter,ModBlocks.PALM_PLANK,ModBlocks.PALM_LOG,"Dark_cherry",4);
+        offerShapelessRecipe(recipeExporter,ModBlocks.PALM_PLANK,ModBlocks.PALM_WOOD,"Dark_cherry",4);
+        offerShapelessRecipe(recipeExporter,ModBlocks.PALM_PLANK,ModBlocks.STRIPPED_PALM_LOG,"Dark_cherry",4);
+        offerShapelessRecipe(recipeExporter,ModBlocks.PALM_PLANK,ModBlocks.STRIPPED_PALM_WOOD,"Dark_cherry",4);
+
+        offerBarkBlockRecipe(recipeExporter,ModBlocks.DARK_CHERRY_WOOD,ModBlocks.DARK_CHERRY_LOG);
+        offerBarkBlockRecipe(recipeExporter,ModBlocks.STRIPPED_DARK_CHERRY_WOOD,ModBlocks.STRIPPED_DARK_CHERRY_LOG);
+
+        offerShapelessRecipe(recipeExporter,ModBlocks.DARK_CHERRY_PLANK,ModBlocks.DARK_CHERRY_LOG,"Dark_cherry",4);
+        offerShapelessRecipe(recipeExporter,ModBlocks.DARK_CHERRY_PLANK,ModBlocks.DARK_CHERRY_WOOD,"Dark_cherry",4);
+        offerShapelessRecipe(recipeExporter,ModBlocks.DARK_CHERRY_PLANK,ModBlocks.STRIPPED_DARK_CHERRY_LOG,"Dark_cherry",4);
+        offerShapelessRecipe(recipeExporter,ModBlocks.DARK_CHERRY_PLANK,ModBlocks.STRIPPED_DARK_CHERRY_WOOD,"Dark_cherry",4);
+
+        createStairsRecipe(ModBlocks.DARK_CHERRY_STAIRS, Ingredient.ofItems(ModBlocks.DARK_CHERRY_PLANK))
+                .criterion(hasItem(ModBlocks.DARK_CHERRY_PLANK), conditionsFromItem(ModBlocks.DARK_CHERRY_PLANK))
+                .offerTo(recipeExporter);
+        offerSlabRecipe(recipeExporter,RecipeCategory.BUILDING_BLOCKS,ModBlocks.DARK_CHERRY_SLAB,ModBlocks.DARK_CHERRY_PLANK);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.DARK_CHERRY_BUTTON,1)
+                .input(ModBlocks.DARK_CHERRY_PLANK)
+                .criterion(hasItem(ModBlocks.DARK_CHERRY_PLANK), conditionsFromItem(ModBlocks.DARK_CHERRY_PLANK))
+                .offerTo(recipeExporter);
+        offerPressurePlateRecipe(recipeExporter, ModBlocks.DARK_CHERRY_PRESSURE_PLATE, ModBlocks.DARK_CHERRY_PLANK);
+
+        createFenceRecipe(ModBlocks.DARK_CHERRY_FENCE,Ingredient.ofItems(ModBlocks.DARK_CHERRY_PLANK))
+                .criterion(hasItem(ModBlocks.DARK_CHERRY_PLANK), conditionsFromItem(ModBlocks.PALM_PLANK))
+                .offerTo(recipeExporter);
+        createFenceGateRecipe(ModBlocks.DARK_CHERRY_FENCE_GATE,Ingredient.ofItems(ModBlocks.DARK_CHERRY_PLANK))
+                .criterion(hasItem(ModBlocks.DARK_CHERRY_PLANK), conditionsFromItem(ModBlocks.DARK_CHERRY_PLANK))
+                .offerTo(recipeExporter);
+
+        createDoorRecipe(ModBlocks.DARK_CHERRY_DOOR,Ingredient.ofItems(ModBlocks.DARK_CHERRY_PLANK))
+                .criterion(hasItem(ModBlocks.DARK_CHERRY_PLANK), conditionsFromItem(ModBlocks.DARK_CHERRY_PLANK))
+                .offerTo(recipeExporter);
+        createTrapdoorRecipe(ModBlocks.DARK_CHERRY_TRAPDOOR,Ingredient.ofItems(ModBlocks.DARK_CHERRY_PLANK))
+                .criterion(hasItem(ModBlocks.DARK_CHERRY_PLANK), conditionsFromItem(ModBlocks.DARK_CHERRY_PLANK))
+                .offerTo(recipeExporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.HEART_OF_THE_STORM)
                 .pattern("EEE")
@@ -202,13 +235,20 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('H', Items.HEART_OF_THE_SEA)
                 .criterion(hasItem(ModItems.ELECTRIC_DUST), conditionsFromItem(ModItems.ELECTRIC_DUST))
                 .offerTo(recipeExporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.ELECTRIC_INGOT)
+                .pattern("EEE")
+                .pattern("EIE")
+                .pattern("EEE")
+                .input('E', ModItems.ELECTRIC_DUST)
+                .input('I', Items.IRON_INGOT)
+                .criterion(hasItem(ModItems.ELECTRIC_DUST), conditionsFromItem(ModItems.ELECTRIC_DUST))
+                .offerTo(recipeExporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.STORM_SCYTHE)
-                .pattern("EES")
+                .pattern("EEE")
                 .pattern("E H")
                 .pattern("  N")
-                .input('E', ModItems.ELECTRIC_DUST)
-                .input('S', Items.NETHER_STAR)
+                .input('E', ModItems.ELECTRIC_INGOT)
                 .input('H', ModItems.HEART_OF_THE_STORM)
                 .input('N', Items.NETHERITE_INGOT)
                 .criterion(hasItem(ModItems.HEART_OF_THE_STORM), conditionsFromItem(ModItems.HEART_OF_THE_STORM))

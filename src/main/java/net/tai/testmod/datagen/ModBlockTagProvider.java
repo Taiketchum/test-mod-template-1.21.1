@@ -49,10 +49,12 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.DEEPSLATE_RUBY_ORE);
 
         getOrCreateTagBuilder(BlockTags.WOODEN_FENCES)
-                .add(ModBlocks.PALM_FENCE);
+                .add(ModBlocks.PALM_FENCE)
+                .add(ModBlocks.DARK_CHERRY_FENCE);
 
         getOrCreateTagBuilder(BlockTags.FENCE_GATES)
-                .add(ModBlocks.PALM_FENCE_GATE);
+                .add(ModBlocks.PALM_FENCE_GATE)
+                .add(ModBlocks.DARK_CHERRY_FENCE_GATE);
 
         getOrCreateTagBuilder(BlockTags.WALLS)
                 .add(ModBlocks.MARBLE_WALL)
@@ -65,6 +67,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .addTag(BlockTags.NEEDS_IRON_TOOL);
 
         getOrCreateTagBuilder(ModTags.Blocks.NEEDS_STORM_TOOL)
+                .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
+
+        getOrCreateTagBuilder(ModTags.Blocks.NEEDS_KAIJU_TOOL)
                 .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
 
 // AHEAD ---------------------------------------------------------------------------------------------------------------
@@ -81,13 +86,30 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.PALM_FENCE)
                 .add(ModBlocks.PALM_FENCE_GATE)
                 .add(ModBlocks.PALM_DOOR)
-                .add(ModBlocks.PALM_TRAPDOOR);
+                .add(ModBlocks.PALM_TRAPDOOR)
+                .add(ModBlocks.DARK_CHERRY_LOG)
+                .add(ModBlocks.DARK_CHERRY_WOOD)
+                .add(ModBlocks.STRIPPED_DARK_CHERRY_LOG)
+                .add(ModBlocks.STRIPPED_DARK_CHERRY_WOOD)
+                .add(ModBlocks.DARK_CHERRY_PLANK)
+                .add(ModBlocks.DARK_CHERRY_STAIRS)
+                .add(ModBlocks.DARK_CHERRY_SLAB)
+                .add(ModBlocks.DARK_CHERRY_BUTTON)
+                .add(ModBlocks.DARK_CHERRY_PRESSURE_PLATE)
+                .add(ModBlocks.DARK_CHERRY_FENCE)
+                .add(ModBlocks.DARK_CHERRY_FENCE_GATE)
+                .add(ModBlocks.DARK_CHERRY_DOOR)
+                .add(ModBlocks.DARK_CHERRY_TRAPDOOR);
 
         getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.PALM_LOG)
                 .add(ModBlocks.PALM_WOOD)
                 .add(ModBlocks.STRIPPED_PALM_LOG)
-                .add(ModBlocks.STRIPPED_PALM_WOOD);
+                .add(ModBlocks.STRIPPED_PALM_WOOD)
+                .add(ModBlocks.DARK_CHERRY_LOG)
+                .add(ModBlocks.DARK_CHERRY_WOOD)
+                .add(ModBlocks.STRIPPED_DARK_CHERRY_LOG)
+                .add(ModBlocks.STRIPPED_DARK_CHERRY_WOOD);
 
 //  CUSTOM -------------------------------------------------------------------------------------------------------------
         getOrCreateTagBuilder(BlockTags.BEACON_BASE_BLOCKS)
